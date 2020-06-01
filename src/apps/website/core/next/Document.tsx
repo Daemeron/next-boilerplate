@@ -1,5 +1,12 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import NextDocument, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { RenderPageResult } from 'next/dist/next-server/lib/utils';
 
@@ -7,7 +14,7 @@ import { RenderPageResult } from 'next/dist/next-server/lib/utils';
  * _document is only rendered on the server side and not on the client side
  * Event handlers like onClick can't be added to this file
  */
-class MyDocument extends Document {
+export class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -19,7 +26,7 @@ class MyDocument extends Document {
             sheet.collectStyles(<App {...props} />),
         });
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await NextDocument.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -46,5 +53,3 @@ class MyDocument extends Document {
     );
   }
 }
-
-export default MyDocument;

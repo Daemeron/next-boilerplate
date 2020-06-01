@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ThemePropsInterface } from '../../core/theme/Theme';
+import { ThemePropsInterface } from '@website/core';
 
 export const Paragraph = styled.p<ThemePropsInterface>`
   font-size: 1rem;

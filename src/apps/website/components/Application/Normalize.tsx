@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
 
 /**
- * TODO: Write tests for <GlobalStyle /> component
+ * TODO: Write tests for <Normalize /> component
  * BODY: Currently react-test-renderer cannot render components created with createGlobalStyle.
  *       When this behaviour get's patched, unit test should be written.
  */
-export const GlobalStyle = createGlobalStyle`
+export const Normalize = createGlobalStyle`
   * {
     padding: 0;
     margin: 0;

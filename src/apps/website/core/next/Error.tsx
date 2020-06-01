@@ -1,18 +1,16 @@
 import React from 'react';
-import Error from 'next/error';
+import NextError from 'next/error';
 import { NextPageContext } from 'next';
 
-interface ErrorPageProps {
+interface ErrorProps {
   statusCode: number;
 }
 
-const ErrorPage = ({ statusCode }: ErrorPageProps): JSX.Element => (
-  <Error statusCode={statusCode} title={statusCode === 404 ? 'Page not found' : 'Something went wrong'} />
+export const Error = ({ statusCode }: ErrorProps): JSX.Element => (
+  <NextError statusCode={statusCode} title={'Something went wrong'} />
 );
 
-ErrorPage.getInitialProps = ({ res, err }: NextPageContext): ErrorPageProps => {
+Error.getInitialProps = ({ res, err }: NextPageContext): ErrorProps => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
   return { statusCode };
 };
-
-export default ErrorPage;

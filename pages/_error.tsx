@@ -1,3 +1,3 @@
-import Error from '../src/apps/website/core/next/Error';
+import { Error } from '@website/core';
 
 export default Error;

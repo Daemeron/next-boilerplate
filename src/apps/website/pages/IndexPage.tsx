@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import Head from 'next/head';
-import { Application, Section, Header, Footer, Headline } from '../components';
+import { Application, Section, Header, Footer, Content } from '@website/components';
 
-export const Index = (): JSX.Element => {
+export const IndexPage = (): JSX.Element => {
   return (
     <Fragment>
       <Head>
@@ -12,9 +12,9 @@ export const Index = (): JSX.Element => {
       <Application>
         <Header />
         <Section>
-          <Headline>
+          <Content>
             <img src={'./zeit.svg'} alt={'zeit'} />
-          </Headline>
+          </Content>
         </Section>
         <Footer />
       </Application>

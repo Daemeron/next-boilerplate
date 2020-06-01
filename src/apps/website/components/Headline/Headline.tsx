@@ -1,7 +1,7 @@
 import React, { ReactChild } from 'react';
 import styled from 'styled-components';
 
-import { ThemePropsInterface } from '../../core/theme/Theme';
+import { ThemePropsInterface } from '@website/core';
 
 interface HeadlineProps {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

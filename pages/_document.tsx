@@ -1,3 +1,3 @@
-import Document from '../src/apps/website/core/next/Document';
+import { Document } from '@website/core';
 
 export default Document;

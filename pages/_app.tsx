@@ -1,3 +1,3 @@
-import App from '../src/apps/website/core/next/App';
+import { App } from '@website/core';
 
 export default App;

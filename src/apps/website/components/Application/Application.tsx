@@ -1,5 +1,5 @@
 import React, { Fragment, ReactChild } from 'react';
-import { GlobalStyle } from '../';
+import { Normalize } from '@website/components';
 import { ThemeProvider } from 'styled-components';
 
 interface ApplicationProps {
@@ -8,7 +8,7 @@ interface ApplicationProps {
 
 export const Application = (props: ApplicationProps): JSX.Element => (
   <Fragment>
-    <GlobalStyle />
-    <ThemeProvider theme={{ style: 'dark' }}>{props.children}</ThemeProvider>
+    <Normalize />
+    <ThemeProvider theme={{ style: 'light' }}>{props.children}</ThemeProvider>
   </Fragment>
 );

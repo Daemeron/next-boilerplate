@@ -1,7 +1,7 @@
 import React, { ReactChild } from 'react';
 import styled from 'styled-components';
 
-import { ThemePropsInterface } from '../../core/theme/Theme';
+import { ThemePropsInterface } from '@website/core';
 
 interface ContainerProps {
   children?: ReactChild | ReactChild[];
