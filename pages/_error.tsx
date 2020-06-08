@@ -1,3 +1,3 @@
-import { Error } from '@website/core';
+import { Error } from '@apps/website';
 
 export default Error;

@@ -1,3 +1,3 @@
-import { Error404 } from '@website/core';
+import { Error404 } from '@apps/website';
 
 export default Error404;

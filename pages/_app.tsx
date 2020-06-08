@@ -1,3 +1,3 @@
-import { App } from '@website/core';
+import { App } from '@apps/website';
 
 export default App;

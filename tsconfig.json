@@ -15,9 +15,8 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@website/components": ["./apps/website/components/"],
-      "@website/core": ["./apps/website/core/"],
-      "@website/pages": ["./apps/website/pages/"]
+      "@libs/components": ["./libs/components/"],
+      "@apps/website": ["./apps/website/"]
     }
   },
   "exclude": ["node_modules"],

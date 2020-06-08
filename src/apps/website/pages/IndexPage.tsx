@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Head from 'next/head';
-import { Application, Section, Header, Footer, Content } from '@website/components';
+import { Section, Header, Footer, Content } from '@libs/components';
+import { Application } from '@apps/website';
 
 export const IndexPage = (): JSX.Element => {
   return (
