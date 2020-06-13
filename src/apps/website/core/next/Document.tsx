@@ -43,8 +43,10 @@ export class Document extends NextDocument {
 
   render(): JSX.Element {
     return (
-      <Html>
-        <Head></Head>
+      <Html lang={'en'}>
+        <Head>
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+        </Head>
         <body>
           <Main />
           <NextScript />
