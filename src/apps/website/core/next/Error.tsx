@@ -3,11 +3,11 @@ import NextError from 'next/error';
 import { NextPageContext } from 'next';
 
 interface ErrorProps {
-  statusCode: number;
+  statusCode?: number;
 }
 
 export const Error = ({ statusCode }: ErrorProps): JSX.Element => (
-  <NextError statusCode={statusCode} title={'Something went wrong'} />
+  <NextError statusCode={statusCode ? statusCode : 500} title={'Something went wrong :('} />
 );
 
 Error.getInitialProps = ({ res, err }: NextPageContext): ErrorProps => {
