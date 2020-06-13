@@ -1,3 +1,3 @@
-import { IndexPage } from '@apps/website';
+import { Home } from '@apps/website';
 
-export default IndexPage;
+export default Home;
