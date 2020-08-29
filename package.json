@@ -13,8 +13,8 @@
     "components:build": "build-storybook"
   },
   "dependencies": {
-    "next": "9.4.4",
-    "polished": "^3.6.4",
+    "next": "9.5.2",
+    "polished": "^3.6.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.1"
