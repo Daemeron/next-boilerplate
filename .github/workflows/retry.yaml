@@ -29,7 +29,7 @@ jobs:
         with:
           script: console.log(github)
       - name: Log
-        run: echo "Retrying ${{ github.event.workflow_run.name }} @ ${{ github.event.workflow_run.id }} - attempt #${{ github.event.workflow_run.run_attempt }}"
+        run: echo "Retrying ${{ github.event.workflow_run.name }} @ ${{ github.event.workflow_run.id }} - attempt \#${{ github.event.workflow_run.run_attempt }}"
       - name: Retry
         uses: actions/github-script@v5
         with:
