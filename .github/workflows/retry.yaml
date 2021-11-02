@@ -11,6 +11,7 @@ jobs:
   retry:
     name: Retry test
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.run_attempt < 6 }}
     strategy:
       matrix:
         node: [14.x]
@@ -28,5 +29,9 @@ jobs:
       - name: View
         uses: actions/github-script@v5
         with:
-          script: console.log(github.event.workflow_run.name)
+          script: console.log(github)
+      - uses: actions/github-script@v5
+        with:
+          script: |
+            github.request(POST context.payload.workflow_run.rerun_url)
 

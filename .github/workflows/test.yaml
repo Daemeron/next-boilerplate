@@ -19,4 +19,4 @@ jobs:
       - name: View
         uses: actions/github-script@v5
         with:
-          script: console.log(github.event)
+          script: console.log(github.event.blah)
