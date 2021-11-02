@@ -33,5 +33,5 @@ jobs:
       - uses: actions/github-script@v5
         with:
           script: |
-            github.request(POST context.payload.workflow_run.rerun_url)
+            github.request('POST ' + context.payload.workflow_run.rerun_url)
 
